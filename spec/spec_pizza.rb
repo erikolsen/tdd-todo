@@ -6,12 +6,18 @@ describe Pizza do
     it "creates a Pizza object" do
       expect(pizza).to be_an_instance_of Pizza
     end
+
     it "has a name" do
       expect(pizza.name).to eq "cheese"
     end
+
     it "has a description" do
       expect(pizza.description).to eq "Gooey Cheese"
     end
+
+    it "has a time_baked" do
+      expect(pizza.time_baked).to eq 12
+
     it "has a time_baked default of 0" do
       expect(pizza.time_baked).to eq 0
     end
