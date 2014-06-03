@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe Task do
-  let(:task) {Task.new('Run', 'Marathon', 'Active')}
+
+  let (:task) {Task.new('Run', 'Marathon', 'Active')}
 
   context '#initialize' do
     it "creates a new Task object with three arguments" do
