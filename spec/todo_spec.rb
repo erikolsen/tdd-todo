@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Task do
+
   let (:task) {Task.new('Run', 'Marathon', 'Active')}
 
   context '#initialize' do
@@ -10,5 +11,11 @@ describe Task do
       expect(task.status).to eq('Active')
       # expect(task.created_at).to eq(Time.now)
     end
-  end
-end
+
+    it "Upon initializing the default status should be 'incomplete'" do
+      incomplete_task = Task.new('Laundry', 'Clean up dirty clothes')
+      expect(incomplete_task.status).to be('incomplete')
+    end
+
+  end #context#initialize-end
+end #describe Task-end
