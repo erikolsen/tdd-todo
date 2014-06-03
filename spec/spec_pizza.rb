@@ -17,6 +17,7 @@ describe Pizza do
 
     it "has a time_baked" do
       expect(pizza.time_baked).to eq 12
+    end
 
     it "has a time_baked default of 0" do
       expect(pizza.time_baked).to eq 0

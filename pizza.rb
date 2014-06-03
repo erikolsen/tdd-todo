@@ -4,7 +4,7 @@ class Pizza
   def initialize
     @name = 'cheese'
     @description = 'Gooey Cheese'
-    @time_baked = 12
+    @time_baked = 0
   end
 end
 
