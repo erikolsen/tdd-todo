@@ -5,17 +5,28 @@ describe Task do
   let (:task) {Task.new('Run', 'Marathon')}
 
   context '#initialize' do
-    it "creates a new Task object with three arguments" do
+
+    it "should have title" do
       expect(task.title).to eq('Run')
+    end
+
+    it "should have description" do
       expect(task.description).to eq('Marathon')
+    end
+
+    it "should have a status" do
+      expect(task.status).to eq('Active')
+    end
+
+    it "should have a created_at" do
+      # mock time.now to always return the same time
+      now = Time.now
+      expect(Time).to receive(:now).and_return(now)
+      expect(task.created_at).to eq(now)
     end
 
     it "Upon initializing the default status should be 'incomplete'" do
       expect(task.status).to eq('Incomplete')
-    end
-
-    it "Upon initializing the created_at should be set to the current Time" do
-      expect(task.created_at.to_s).to eq(Time.now.to_s)
     end
 
   end #context#initialize-end
